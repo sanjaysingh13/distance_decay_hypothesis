@@ -1,4 +1,5 @@
 import math
+from ipywidgets import widgets
 def getBoundsZoomLevel(bounds):
 	WORLD_DIM = {"height": 256, "width": 256}
 	mapDim = { "height": 800, "width": 1000 }
@@ -27,5 +28,6 @@ def calculate_utm_zone(lat, lon):
     zone = int((180 + lon) // 6) + 1
 
     return (zone, hemi)
-map_ = 'AIzaSyB-Cdurc56JuKBXnfJJvxbuSnwO1-Z3AqI'
 
+txt_get_api_key = widgets.Text() 
+input_widgets = widgets.HBox([txt_get_api_key, widgets.Label(value="Enter API Key") ])
